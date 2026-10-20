@@ -1,0 +1,5 @@
+<%@page pageEncoding="UTF-8"%>
+<%@include file="WEB-INF/encabezado.jspf"%><h1>Confirma tu compra</h1><c:choose><c:when test="${sessionScope.carrito.vacio}"><p>Agrega entradas o dulcería antes de pagar.</p><a class="boton" href="TiendaServlet">Ver cartelera</a></c:when><c:otherwise>
+<section class="pago"><h2>Pago simulado</h2><p>No se realiza ningún cobro real ni se solicitan datos de tarjetas.</p><p class="total">Total referencial S/ <c:out value="${sessionScope.carrito.total}"/></p><p>El comprobante mostrará el total con los precios vigentes de la tienda.</p>
+<form method="post" action="PagoServlet"><input type="hidden" name="csrf" value="<c:out value='${sessionScope.csrf}'/>"><label for="medioPago">Medio de pago</label><select name="medioPago" id="medioPago"><option value="TARJETA">Tarjeta</option><option value="YAPE">Yape</option><option value="PLIN">Plin</option></select><button type="submit">Confirmar compra</button></form><a href="CarritoServlet">Revisar carrito</a></section>
+</c:otherwise></c:choose><%@include file="WEB-INF/pie.jspf"%>

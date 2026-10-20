@@ -1,0 +1,135 @@
+{
+  "preparacionesSQL": 25,
+  "fuentesJava": 38,
+  "dao": 9,
+  "createStatementEnAplicacion": 0,
+  "sqlOriginalIdentico": true,
+  "fuentesDesktopIdenticas": true,
+  "llamadas": [
+    {
+      "archivo": "src/java/dao/AuditoriaDAO.java",
+      "linea": 13,
+      "codigo": "try (PreparedStatement ps = cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/AuditoriaDAO.java",
+      "linea": 23,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(sql); ResultSet rs = ps.executeQuery()) {"
+    },
+    {
+      "archivo": "src/java/dao/ClienteDAO.java",
+      "linea": 8,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/ConsultaVentaDAO.java",
+      "linea": 10,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/ConsultaVentaDAO.java",
+      "linea": 18,
+      "codigo": "try(PreparedStatement pe=cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/ConsultaVentaDAO.java",
+      "linea": 25,
+      "codigo": "try(PreparedStatement pd=cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/ConsultaVentaDAO.java",
+      "linea": 36,
+      "codigo": "try(Connection cn=ConexionSQL.getConexion(); PreparedStatement ps=cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/ConsultaVentaDAO.java",
+      "linea": 45,
+      "codigo": "try(Connection cn=ConexionSQL.getConexion(); PreparedStatement ps=cn.prepareStatement(sql); ResultSet rs=ps.executeQuery()) {"
+    },
+    {
+      "archivo": "src/java/dao/EntradaDAO.java",
+      "linea": 11,
+      "codigo": "try(PreparedStatement ps=cn.prepareStatement(\"SELECT f.idFuncion FROM Funcion f WITH (UPDLOCK,HOLDLOCK) JOIN Entrada e ON e.idFuncion=f.idFuncion WHERE e.idEntrada=?\")) {"
+    },
+    {
+      "archivo": "src/java/dao/EntradaDAO.java",
+      "linea": 14,
+      "codigo": "try(PreparedStatement ps=cn.prepareStatement(\"UPDATE Entrada SET estado='ANULADA' WHERE idEntrada=? AND estado='ACTIVA'\")) {"
+    },
+    {
+      "archivo": "src/java/dao/EntradaDAO.java",
+      "linea": 17,
+      "codigo": "try(PreparedStatement ps=cn.prepareStatement(\"UPDATE Funcion SET butacasDisponibles=butacasDisponibles+1 WHERE idFuncion=? AND butacasDisponibles<butacasTotales\")) {"
+    },
+    {
+      "archivo": "src/java/dao/FuncionDAO.java",
+      "linea": 10,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/FuncionDAO.java",
+      "linea": 22,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/FuncionDAO.java",
+      "linea": 32,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(\"SELECT butaca FROM Entrada WHERE idFuncion=? AND estado='ACTIVA'\")) {"
+    },
+    {
+      "archivo": "src/java/dao/ProductoDAO.java",
+      "linea": 9,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(\"SELECT idProducto,nombre,categoria,precio,activo FROM Producto WHERE activo=1 ORDER BY categoria,nombre\"); ResultSet rs = ps.executeQuery()) {"
+    },
+    {
+      "archivo": "src/java/dao/ProductoDAO.java",
+      "linea": 15,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(\"SELECT idProducto,nombre,categoria,precio,activo FROM Producto WHERE idProducto=? AND activo=1\")) {"
+    },
+    {
+      "archivo": "src/java/dao/SedeDAO.java",
+      "linea": 9,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(\"SELECT idSede, nombre, ciudad FROM Sede ORDER BY nombre\"); ResultSet rs = ps.executeQuery()) {"
+    },
+    {
+      "archivo": "src/java/dao/UsuarioDAO.java",
+      "linea": 8,
+      "codigo": "try (Connection cn = ConexionSQL.getConexion(); PreparedStatement ps = cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/VentaDAO.java",
+      "linea": 17,
+      "codigo": "try (PreparedStatement ps = cn.prepareStatement(cabecera, Statement.RETURN_GENERATED_KEYS)) {"
+    },
+    {
+      "archivo": "src/java/dao/VentaDAO.java",
+      "linea": 31,
+      "codigo": "try (PreparedStatement ps = cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/VentaDAO.java",
+      "linea": 40,
+      "codigo": "try (PreparedStatement ps = cn.prepareStatement(\"UPDATE Funcion SET butacasDisponibles=butacasDisponibles-1 WHERE idFuncion=? AND butacasDisponibles>0\")) {"
+    },
+    {
+      "archivo": "src/java/dao/VentaDAO.java",
+      "linea": 45,
+      "codigo": "try (PreparedStatement ps = cn.prepareStatement(sql)) {"
+    },
+    {
+      "archivo": "src/java/dao/VentaDAO.java",
+      "linea": 58,
+      "codigo": "try (PreparedStatement ps = cn.prepareStatement(\"SELECT precio FROM Producto WITH (HOLDLOCK) WHERE idProducto=? AND activo=1\")) {"
+    },
+    {
+      "archivo": "src/java/dao/VentaDAO.java",
+      "linea": 64,
+      "codigo": "try (PreparedStatement ps = cn.prepareStatement(\"INSERT INTO DetalleVenta(idVenta,idProducto,cantidad,precioUnit) VALUES(?,?,?,?)\")) {"
+    },
+    {
+      "archivo": "src/java/dao/VentaDAO.java",
+      "linea": 69,
+      "codigo": "try (PreparedStatement ps = cn.prepareStatement(\"UPDATE Venta SET total=? WHERE idVenta=?\")) {"
+    }
+  ]
+}

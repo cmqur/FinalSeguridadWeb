@@ -1,0 +1,2 @@
+Texto para revisar y adaptar en el anexo XI del grupo:
+Se utilizó Codex para construir una versión de referencia de la aplicación, proponer la distribución de pasos, generar código y documentación y ejecutar comprobaciones HTTP y SQL. El grupo debe declarar el uso realizado y validar el código, las pruebas y las capturas antes de entregar.

@@ -1,0 +1,56 @@
+[
+  {
+    "n": 1,
+    "prueba": "Inyección SQL",
+    "correcto": true,
+    "resultado": "Payload enviado al login; acceso denegado con el mensaje genérico."
+  },
+  {
+    "n": 2,
+    "prueba": "Fuerza bruta",
+    "correcto": true,
+    "resultado": "Al tercer fallo, bloqueo de 5 minutos; persiste al cambiar de sesión e impide la clave correcta durante el bloqueo."
+  },
+  {
+    "n": 3,
+    "prueba": "IDOR",
+    "correcto": true,
+    "resultado": "Comprobante y búsqueda en Mis entradas rechazan la compra de otro cliente, sin mostrar su detalle."
+  },
+  {
+    "n": 4,
+    "prueba": "Escalada de privilegios",
+    "correcto": true,
+    "resultado": "CAJERO recibe 403 en los reportes ADMIN y en las JSP directas; tampoco puede usar el pago del cliente."
+  },
+  {
+    "n": 5,
+    "prueba": "XSS almacenado",
+    "correcto": true,
+    "resultado": "Nombre de cliente guardado en SQL Server; la respuesta contiene el texto escapado y ningún elemento script con el payload."
+  },
+  {
+    "n": 6,
+    "prueba": "CSRF",
+    "correcto": true,
+    "resultado": "Carrito, pago y anulación rechazan token ausente o incorrecto con 403; anular por GET devuelve 405."
+  },
+  {
+    "n": 7,
+    "prueba": "Manipulación de precio",
+    "correcto": true,
+    "resultado": "Se enviaron precio y total de S/ 0.01. SQL Server guardó S/ 80.70 usando los precios oficiales de entrada y 2 productos."
+  },
+  {
+    "n": 8,
+    "prueba": "Doble venta de butaca",
+    "correcto": true,
+    "resultado": "Dos sesiones pagaron simultáneamente la misma butaca: 1 compra confirmada y 1 rechazo; solo se descontó una butaca y se insertó una venta."
+  },
+  {
+    "n": 9,
+    "prueba": "Sesión tras logout",
+    "correcto": true,
+    "resultado": "La sesión queda invalidada; una petición posterior a Mis entradas redirige al login y conserva Cache-Control: no-store. Botón Atrás pendiente de comprobación visual."
+  }
+]

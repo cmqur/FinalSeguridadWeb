@@ -1,0 +1,4 @@
+<%@page pageEncoding="UTF-8"%>
+<c:set var="sedeProducto" value="${empty idSede ? (sessionScope.carrito.idSede == 0 ? 1 : sessionScope.carrito.idSede) : idSede}"/>
+<div class="productos"><c:forEach var="p" items="${productos}"><article><p class="etiqueta"><c:out value="${p.categoria}"/></p><h3><c:out value="${p.nombre}"/></h3><p class="precio">S/ <c:out value="${p.precio}"/></p>
+<form method="post" action="CarritoServlet"><input type="hidden" name="csrf" value="<c:out value='${sessionScope.csrf}'/>"><input type="hidden" name="accion" value="producto"><input type="hidden" name="idProducto" value="<c:out value='${p.idProducto}'/>"><input type="hidden" name="idSede" value="<c:out value='${sedeProducto}'/>"><label>Cantidad <input type="number" name="cantidad" value="1" min="1" max="10" required></label><button type="submit">Agregar al carrito</button></form></article></c:forEach></div>

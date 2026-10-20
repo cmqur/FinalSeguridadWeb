@@ -1,0 +1,26 @@
+{
+  "controles": [
+    "Formato de butaca incorrecto",
+    "Formato de butaca incorrecto",
+    "Formato de butaca incorrecto",
+    "ya esta ocupada",
+    "ya esta ocupada",
+    "entre 1 y 10 entradas",
+    "Producto o cantidad no validos",
+    "Producto o cantidad no validos",
+    "Rechazo EFECTIVO en pago web",
+    "Error JSP final compilado y HTTP 404",
+    "JS final servido con comprobacion del historial"
+  ],
+  "correcto": true,
+  "eventos": {
+    "ACCESO_DENEGADO": 7,
+    "ANULACION": 1,
+    "BLOQUEO": 1,
+    "COMPRA": 2,
+    "CSRF": 6,
+    "LOGIN_FALLIDO": 4,
+    "LOGIN_OK": 11,
+    "LOGOUT": 1
+  }
+}
